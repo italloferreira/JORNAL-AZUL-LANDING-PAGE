@@ -33,13 +33,30 @@
 
         <div class="forms-conteiner">
             <form action="">
-                <input type="text" placeholder="titulo" class="title-input">
-                <input type="file" class="file-input">
-                <input type="text" placeholder="subtitulo" class="caption-input">
-                <textarea name="" id="" class="body-input"></textarea>
-                <input type="submit" class="submit-input">
+                <div class="input-group-title">
+                    <label for="title">Título</label>
+                    <input type="text" id="title" class="title-input">
+                </div>
+
+                <div class="input-group-file">
+                    <label for="file">Arquivo</label>
+                    <input type="file" id="file" class="file-input">
+                </div>
+
+                <div class="input-group-caption">
+                    <label for="caption">Subtítulo</label>
+                    <input type="text" id="caption" class="caption-input">
+                </div>
+
+                <div class="input-group-body">
+                    <label for="body">Texto</label>
+                    <textarea id="body" class="body-input"></textarea>
+                </div>
+
+                <input type="submit" class="submit-input" value="Enviar">
             </form>
         </div>
+
     </main>
 
     <!--footer-->
