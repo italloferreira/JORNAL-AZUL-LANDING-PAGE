@@ -16,41 +16,50 @@
 <body>
     <!--header-->
     <header>
-        <img class="logo" src="../assets/imgs/logo.png" alt="">
+        <a href="../index.html"><img class="logo" src="../assets/imgs/logo.png" alt=""></a>
+
+        <ul class="menu-conteiner">
+            <a href="../index.html">
+                <li class="menu">início</li>
+            </a>
+            <a href="./mineiro.html">
+                <li class="menu">tabela mineiro</li>
+            </a>
+            <a href="./brasileirao.html">
+                <li class="menu">tabela brasileirão</li>
+            </a>
+            <a href="./forms.html">
+                <li class="menu" id="this-menu">add noticia</li>
+            </a>
+        </ul>
     </header>
 
     <!--main-->
     <main>
-
         <div class="add-news-conteiner">
-            <p>você acessou a árera de criação de noticias</p>
-        </div>
-
-        <div class="button-conteiner">
-            <button class="button-first-news">NOTICIA PRINCIPAL</button>
-            <button class="button-other-news">NOTICIA SECUNDARIA</button>
+            <p>você acessou a área de criação de notícias</p>
         </div>
 
         <div class="forms-conteiner">
-            <form action="">
+            <form id="newsForm">
                 <div class="input-group-title">
                     <label for="title">Título</label>
-                    <input type="text" id="title" class="title-input">
+                    <input type="text" id="title" class="title-input" required>
                 </div>
 
                 <div class="input-group-file">
-                    <label for="file">Arquivo</label>
-                    <input type="file" id="file" class="file-input">
+                    <label for="file">Arquivo (Imagem)</label>
+                    <input type="file" id="file" class="file-input" accept="image/*">
                 </div>
 
                 <div class="input-group-caption">
                     <label for="caption">Subtítulo</label>
-                    <input type="text" id="caption" class="caption-input">
+                    <input type="text" id="caption" class="caption-input" required>
                 </div>
 
                 <div class="input-group-body">
                     <label for="body">Texto</label>
-                    <textarea id="body" class="body-input"></textarea>
+                    <textarea id="body" class="body-input" required></textarea>
                 </div>
 
                 <input type="submit" class="submit-input" value="Enviar">
@@ -63,13 +72,17 @@
     <footer class="footer">
 
         <div class="footer-logo">
-            <img src="../assets/imgs/logo.png" alt="">
+            <a href="../index.html"><img class="logo" src="../assets/imgs/logo.png" alt=""></a>
         </div>
 
         <div class="social-conteiner">
-            <img src="../assets/imgs/logo.png" alt="" class="social">
-            <img src="../assets/imgs/logo.png" alt="" class="social">
-            <img src="../assets/imgs/logo.png" alt="" class="social">
+            <a
+                href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=GTvVlcSBptMkxsXLxCrTvMvpqjhhXqQPhwcvvftSwxJsMcrkbsRlxFNZWRCDDDtRfRRkbWkxxWMXw"><img
+                    src="../assets/imgs/icons/email.png" alt="" class="social"></a>
+            <a href="https://github.com/italloferreira"><img src="../assets/imgs/icons/github.png" alt=""
+                    class="social"></a>
+            <a href="https://www.linkedin.com/in/itallo-ferreira/"><img src="../assets/imgs/icons/linkedin.png" alt=""
+                    class="social"></a>
         </div>
 
         <div class="footer-bottom">
@@ -77,6 +90,7 @@
         </div>
     </footer>
 
+    <script src="../assets/js/form.js"></script>
 </body>
 
 </html>
