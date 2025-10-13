@@ -5,21 +5,48 @@
     font-family: "Montserrat";
 }
 
+:root{
+    --backgoud: #003a69;
+    --second-backgoud:#f1f1f1;
+    --text: #f2f2f2;
+    --hover:#002575;
+    --border:rgb(160, 160, 160);
+}
+
 /* header */
 
 header {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
-    background-color: #003a69;
+    background-color: var(--backgoud);
     width: 100%;
     height: 15vh;
     padding: 15px;
 }
 
 .logo {
-    width: 150px;
-    filter: brightness(0) invert(93%);
+    width: 200px;
+}
+
+.menu-conteiner{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    list-style: none;
+    color: var(--text);
+}
+
+.menu-conteiner a{
+    text-decoration: none;
+    color: var(--text);
+}
+
+#this-menu{
+    border-bottom: 1px solid var(--text);
 }
 
 
@@ -33,7 +60,7 @@ main {
     height: 100%;
     width: 100%;
     padding-bottom: 2%;
-    background-color: #f3f3f3;
+    background-color: var(--second-backgoud);
 }
 
 .add-news-conteiner{
@@ -42,50 +69,13 @@ main {
     align-items: center;
     width: 100%;
     height: 5vh;
-    background-color: lightgray;
 }
 
 .add-news-conteiner p{
     font-family: 20px;
-    color: #f2f2f2;
+    color: var(--text);
 }
 
-.button-conteiner {
-   display: flex;
-   justify-content: center;
-   justify-content: space-evenly;
-   align-items: center;
-   width: 90%;
-   height: 15vh;
-}
-
-.button-first-news{
-    background-color: #0033A0;
-    width: 30%;
-    height: 50%;
-    color: #FEFEFE;
-    border-radius: 14px;
-    border: 0;
-}
-
-.button-first-news:hover{
-    background-color: #002575;
-    transition: 0.5s;
-}
-
-.button-other-news{
-    border: 2px #0033A0 solid;
-    background-color: #ffff;
-    width: 30%;
-    height: 50%;
-    color: #0033A0;
-    border-radius: 14px;
-}
-
-.button-other-news:hover{
-    background-color: #f2f2f2;
-    transition: 0.5s;
-}
 
 .forms-conteiner {
     width: 100%;
@@ -148,11 +138,11 @@ main {
     height: 50%;
     padding: 0px 20px;
     background-color: transparent;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 2px solid var(--border);
 }
 
 .file-input {
-    border: 2px dashed lightgray;
+    border: 2px dashed var(--border);
     background: transparent;
     padding: 12px;
     border-radius: 8px;
@@ -164,7 +154,7 @@ main {
     height: 50%;
     padding: 0px 20px;
     background-color: transparent;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 2px solid var(--border);
 }
 
 
@@ -174,7 +164,7 @@ main {
     border-radius: 8px;
     background: transparent;
     padding: 20px;
-    border: 2px dashed lightgray;
+    border: 2px dashed var(--border);
     font-size: 15px;
     outline: none;
 }
@@ -182,8 +172,8 @@ main {
 .submit-input {
     grid-column: 1 / 3;
     grid-row: 5 / 6;
-    background-color: #0033A0;
-    color: #f2f2f2;
+    background-color: var(--backgoud);
+    color: var(--text);
     cursor: pointer;
     border: none;
     border-radius: 8px;
@@ -193,13 +183,46 @@ main {
 }
 
 .submit-input:hover {
-    background-color: #002575;
+    background-color: var(--hover);
 }
 
 input:focus,
 textarea:focus {
     outline: none;
 }
+
+.news-list {
+  width: 90%;
+  margin: 20px auto;
+  background-color: var(--second-backgoud);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.news-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--backgoud);
+  color: var(--text);
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.delete-btn {
+  background-color: crimson;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: red;
+}
+
 
 
 
@@ -210,8 +233,8 @@ textarea:focus {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #003a69;
-    color: #f2f2f2;
+    background-color: var(--backgoud);
+    color: var(--text);
     width: 100%;
     height: 45vh;
 }
@@ -235,8 +258,4 @@ textarea:focus {
     align-items: center;
     justify-content: center;
     justify-content: space-around;
-}
-
-.social-conteiner img{
-    width: 10vh;
 }

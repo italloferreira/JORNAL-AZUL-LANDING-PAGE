@@ -16,18 +16,26 @@
 <body>
     <!--header-->
     <header>
-        <img class="logo" src="./assets/imgs/logo.png" alt="">
+        <a href="index.html"><img class="logo" src="./assets/imgs/logo.png" alt=""></a>
 
         <ul class="menu-conteiner">
-            <li class="menu">menu 1</li>
-            <li class="menu">menu 2 </li>
-            <li class="menu">menu 3 </li>
-            <li class="menu">menu 4</li>
+            <a href="./index.html">
+                <li class="menu" id="this-menu">início</li>
+            </a>
+            <a href="./pages/mineiro.html">
+                <li class="menu">tabela mineiro</li>
+            </a>
+            <a href="./pages/brasileirao.html">
+                <li class="menu">tabela brasileirão</li>
+            </a>
+            <a href="./pages/forms.html">
+                <li class="menu">add noticia</li>
+            </a>
         </ul>
 
         <div class="search-conteiner">
             <input type="search" name="" id="" class="search-input" placeholder="pesquisa...">
-            <img class="search" src="./assets/imgs/logo.png" alt="">
+            <img class="search" src="./assets/imgs/icons/search.png" alt="">
         </div>
 
     </header>
@@ -35,43 +43,34 @@
     <!--main-->
     <main>
 
-        <div class="add-news-conteiner">
-            <p>add nova noticia + </p>
-        </div>
-
         <div class="first-news">
-            <h1>Titulo</h1>
-            <p>Sub-titulo</p>
-            <a href=""><button>Ver noticia</button></a>
+            <h1>Título</h1>
+            <p>Sub-título</p>
+            <a href=""><button>Ver notícia</button></a>
         </div>
 
         <div class="other-news-conteiner">
-            <div class="other-news">
-                <h1 class="news-title">Titulo</h1>
-                <a href=""><button class="news-button">ver noticia</button></a>
-            </div>
-            <div class="other-news">
-                <h1 class="news-title">Titulo</h1>
-                <a href=""><button class="news-button">ver noticia</button></a>
-            </div>
-            <div class="other-news">
-                <h1 class="news-title">Titulo</h1>
-                <a href=""><button class="news-button">ver noticia</button></a>
-            </div>
+            <!-- Cards das outras notícias serão inseridos aqui -->
         </div>
+
     </main>
+
 
     <!--footer-->
     <footer class="footer">
 
         <div class="footer-logo">
-            <img src="./assets/imgs/logo.png" alt="">
+            <a href="index.html"><img class="logo" src="./assets/imgs/logo.png" alt=""></a>
         </div>
 
         <div class="social-conteiner">
-            <img src="./assets/imgs/logo.png" alt="" class="social">
-            <img src="./assets/imgs/logo.png" alt="" class="social">
-            <img src="./assets/imgs/logo.png" alt="" class="social">
+            <a
+                href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=GTvVlcSBptMkxsXLxCrTvMvpqjhhXqQPhwcvvftSwxJsMcrkbsRlxFNZWRCDDDtRfRRkbWkxxWMXw"><img
+                    src="./assets/imgs/icons/email.png" alt="" class="social"></a>
+            <a href="https://github.com/italloferreira"><img src="./assets/imgs/icons/github.png" alt=""
+                    class="social"></a>
+            <a href="https://www.linkedin.com/in/itallo-ferreira/"><img src="./assets/imgs/icons/linkedin.png" alt=""
+                    class="social"></a>
         </div>
 
         <div class="footer-bottom">
@@ -79,6 +78,7 @@
         </div>
     </footer>
 
+    <script src="./assets/js/card-news.js"></script>
 </body>
 
 </html>
