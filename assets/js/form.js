@@ -10,17 +10,32 @@ document.addEventListener("DOMContentLoaded", () => {
   container.classList.add("news-list");
   document.querySelector("main").appendChild(container);
 
+  // cria botão para limpar o cache
+  const clearBtn = document.createElement("button");
+  clearBtn.textContent = "🗑️ Limpar todas as notícias";
+  clearBtn.classList.add("clear-cache-btn");
+  clearBtn.style.marginTop = "10px";
+  clearBtn.style.padding = "8px 12px";
+  clearBtn.style.backgroundColor = "#d32f2f";
+  clearBtn.style.color = "#fff";
+  clearBtn.style.border = "none";
+  clearBtn.style.borderRadius = "6px";
+  clearBtn.style.cursor = "pointer";
+
+  // adiciona o botão abaixo da lista
+  document.querySelector("main").appendChild(clearBtn);
+
   // pega notícias do localStorage
   function getNews() {
-    return JSON.parse(localStorage.getItem("news")) || [];
+    return JSON.parse(localStorage.getItem("noticias")) || [];
   }
 
   // salva notícias no localStorage
   function saveNews(newsList) {
-    localStorage.setItem("news", JSON.stringify(newsList));
+    localStorage.setItem("noticias", JSON.stringify(newsList));
   }
 
-  // renderiza lista de notícias no formulário
+  // renderiza lista de notícias
   function renderNewsList() {
     const newsList = getNews();
     container.innerHTML = "<h3>Notícias cadastradas:</h3>";
@@ -49,12 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // função para deletar notícia
+  // função para deletar uma notícia específica
   function deleteNews(index) {
     const newsList = getNews();
-    newsList.splice(index, 1); // remove a notícia pelo índice
+    newsList.splice(index, 1);
     saveNews(newsList);
-    renderNewsList(); // atualiza a lista
+    renderNewsList();
   }
 
   // função para converter imagem em base64
@@ -86,7 +101,11 @@ document.addEventListener("DOMContentLoaded", () => {
       imageBase64 = await toBase64(file);
     }
 
+    // gera um ID único
+    const id = Date.now().toString();
+
     const newNews = {
+      id,
       title,
       caption,
       body,
@@ -101,6 +120,16 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
     renderNewsList();
     alert("Notícia adicionada com sucesso!");
+  });
+
+  // botão para limpar apenas as notícias
+  clearBtn.addEventListener("click", () => {
+    const confirmClear = confirm("Tem certeza que deseja apagar todas as notícias?");
+    if (confirmClear) {
+      localStorage.removeItem("noticias"); // apaga só as notícias
+      renderNewsList();
+      alert("Todas as notícias foram apagadas!");
+    }
   });
 
   // renderiza lista inicial
