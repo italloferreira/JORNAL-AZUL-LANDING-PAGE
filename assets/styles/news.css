@@ -94,10 +94,14 @@ main{
 }
 
 .top-news-conteiner h2{
+    text-align: center;
+    width: 90%;
     color: var(--title);
 }
 
 .top-news-conteiner p{
+    text-align: center;
+    width: 90%;
     color: var(--caption);
 }
 
@@ -111,6 +115,7 @@ main{
 }
 
 .body-news-conteiner{
+    padding: 20px;
     color: var(--text);
     width: 90%;
     height: 100%
@@ -144,7 +149,7 @@ main{
 
 .social-conteiner{
     width: 50%;
-    height: 30vh;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
