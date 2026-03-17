@@ -70,16 +70,103 @@ header {
 }
 
 
-/* main */
+
+/* tabela ao vivo */
 
 main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
+    min-height: 55vh;
     width: 100%;
-    padding-bottom: 2%;
+    padding: 2%;
+    background-color: #f7fafc;
+}
+
+.table-wrapper {
+    width: min(1100px, 100%);
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.table-header h1 {
+    color: var(--backgoud);
+    margin-bottom: 4px;
+}
+
+#update-status {
+    color: #4a5568;
+    font-size: 14px;
+}
+
+#refresh-button {
+    border: none;
+    border-radius: 10px;
+    background: var(--backgoud);
+    color: white;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+#refresh-button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.standings-table thead {
+    background-color: #edf2f7;
+}
+
+.standings-table th,
+.standings-table td {
+    text-align: center;
+    padding: 10px 8px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.team-cell {
+    text-align: left !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 190px;
+}
+
+.team-cell img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.position-cell {
+    font-weight: 600;
+}
+
+.position-change {
+    color: #2f855a;
+    font-size: 12px;
 }
 
 
